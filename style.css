@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  font-size: 50px;
 }
 
 :root {
@@ -8,18 +9,68 @@
   --grid-rows: 1;
 }
 
+body {
+  background-color: rgba(39, 12, 8, 0.836);
+}
 #container {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   display: grid;
   grid-template-rows: repeat(var(--grid-rows), 1fr);
   grid-template-columns: repeat(var(--grid-cols), 1fr);
 }
 
+.defora {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.dedentro {
+  padding: 70px 100px 200px;
+  margin: auto;
+  background-color: rgb(151, 3, 3);
+  border-radius: 40px;
+  border: 2px solid black;
+  box-shadow: 26px 15px 16px 10px #0000007e;
+}
+.telinha {
+  box-shadow: inset 0px 0px 30px 10px black;
+  height: 400px;
+  width: 680px;
+  margin: auto;
+  border-radius: 10px;
+  border: 2px solid black;
+  overflow: hidden;
+  background-color: white;
+}
 .grid-item {
-  border: 1px solid #ddd;
+  /* border: 1px solid rgb(0, 0, 0); */
 }
 
 .grid-item:hover {
-  background-color: red;
+  background-color: black;
+}
+
+.controles {
+  position: absolute;
+  bottom: 23%;
+  margin: auto;
+}
+
+/* .knobx {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.knoby {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+} */
+.reset {
+  font-size: medium;
+  height: 50px;
+  width: 100px;
+  border-radius: 8%;
 }
