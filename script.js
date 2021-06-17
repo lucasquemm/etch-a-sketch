@@ -1,5 +1,6 @@
 const container = document.getElementById('container')
 let reset = document.querySelector('.reset')
+let pincel = false
 
 function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows)
@@ -9,13 +10,25 @@ function makeRows(rows, cols) {
     // cell.innerText = c + 1
     container.appendChild(cell).className = 'grid-item'
     cell.addEventListener('mouseover', function () {
-      cell.style.backgroundColor = 'grey'
+      if (pincel) {
+        cell.style.backgroundColor = 'black'
+      }
     })
-    cell.addEventListener('mouseout', function () {
+    cell.addEventListener('click', function () {
       cell.style.backgroundColor = 'black'
+    })
+    cell.addEventListener('mousedown', function () {
+      pincel = true
+    })
+    cell.addEventListener('mouseup', function () {
+      pincel = false
     })
   }
 }
+container.addEventListener('mouseleave', function () {
+  pincel = false
+  console.log('cu')
+})
 
 reset.addEventListener('click', function () {
   document
@@ -24,4 +37,4 @@ reset.addEventListener('click', function () {
   console.log('u')
 })
 
-makeRows(24, 24)
+makeRows(50, 50)

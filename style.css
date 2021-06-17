@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: rgba(39, 12, 8, 0.836);
+  background-color: rgba(49, 22, 11, 0.836);
 }
 #container {
   height: 100%;
@@ -27,7 +27,7 @@ body {
   height: 100%;
 }
 .dedentro {
-  padding: 70px 100px 200px;
+  padding: 70px 100px 40px;
   margin: auto;
   background-color: rgb(151, 3, 3);
   border-radius: 40px;
@@ -35,12 +35,12 @@ body {
   box-shadow: 26px 15px 16px 10px #0000007e;
 }
 .telinha {
-  box-shadow: inset 0px 0px 30px 10px black;
+  box-shadow: inset 0px 0px 30px 5px black;
   height: 400px;
   width: 680px;
   margin: auto;
   border-radius: 10px;
-  border: 2px solid black;
+  border: 3px solid black;
   overflow: hidden;
   background-color: white;
 }
@@ -53,24 +53,23 @@ body {
 }
 
 .controles {
-  position: absolute;
-  bottom: 23%;
-  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+  align-items: center;
 }
 
-/* .knobx {
-  height: 100px;
-  width: 100px;
+.knob {
+  box-shadow: 13px 7px 16px #0000007e;
+  height: 130px;
+  width: 130px;
   border-radius: 50%;
+  border: 3px solid black;
 }
-.knoby {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-} */
 .reset {
-  font-size: medium;
+  font-size: 20px;
   height: 50px;
   width: 100px;
   border-radius: 8%;
+  border: 3px solid black;
 }
