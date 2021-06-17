@@ -27,14 +27,12 @@ function makeRows(rows, cols) {
 }
 container.addEventListener('mouseleave', function () {
   pincel = false
-  console.log('cu')
 })
 
 reset.addEventListener('click', function () {
   document
     .querySelectorAll('.grid-item')
     .forEach((celula) => (celula.style.backgroundColor = 'transparent'))
-  console.log('u')
 })
 
 makeRows(50, 50)
