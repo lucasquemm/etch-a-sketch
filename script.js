@@ -1,6 +1,7 @@
 const container = document.getElementById('container')
 let reset = document.querySelector('.reset')
 let pincel = false
+let telao = document.querySelector('.dedentro')
 
 function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows)
@@ -33,6 +34,11 @@ reset.addEventListener('click', function () {
   document
     .querySelectorAll('.grid-item')
     .forEach((celula) => (celula.style.backgroundColor = 'transparent'))
+  telao.classList.add('shakededentro')
 })
 
-makeRows(50, 50)
+telao.addEventListener('animationend', function () {
+  telao.classList.remove('shakededentro')
+})
+
+makeRows(55, 55)
